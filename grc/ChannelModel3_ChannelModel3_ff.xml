@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<block>
+  <name>ChannelModel3_ff</name>
+  <key>ChannelModel3_ChannelModel3_ff</key>
+  <category>[ChannelModel3]</category>
+  <import>import ChannelModel3</import>
+  <make>ChannelModel3.ChannelModel3_ff($tx, $ty, $tz, $rx, $ry, $rz, $m, $A, $ts, $ga, $ampl)</make>
+  <callback>d_tx($tx)</callback>
+  <callback>d_ty($ty)</callback>
+  <callback>d_tz($tz)</callback>
+  <callback>d_rx($rx)</callback>
+  <callback>d_ry($ry)</callback>
+  <callback>d_rz($rz)</callback>
+  <callback>d_ga($ga)</callback>
+  <callback>d_ampl($ampl)</callback>
+  
+  
+  
+
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>TX</name>
+    <key>tx</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>TY</name>
+    <key>ty</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>TZ</name>
+    <key>tz</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>RX</name>
+    <key>rx</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>RY</name>
+    <key>ry</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>RZ</name>
+    <key>rz</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Lambertian Order</name>
+    <key>m</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Photosensor Area</name>
+    <key>A</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Transmitting Function</name>
+    <key>ts</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Gain</name>
+    <key>ga</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Noise Amplitude</name>
+    <key>ampl</key>
+    <type>float</type>
+  </param>
+  
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>float</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>
